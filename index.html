@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 背景光斑画布 -->
+    <canvas id="lightCanvas"></canvas>
+    
+    <!-- 鼠标跟随光晕 -->
+    <div class="cursor-light"></div>
+
+    <!-- Title -->
+    <header class="page-title">
+        <h1>My only girl friend</h1>
+    </header>
+
+    <!-- Gallery -->
+    <main class="gallery-section">
+        <div class="gallery-grid" id="gallery"></div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-stage">
+            <div class="lightbox-frame">
+                <div class="frame-inner">
+                    <img id="lightbox-img" src="" alt="">
+                </div>
+            </div>
+            <div class="lightbox-info">
+                <span class="lightbox-num" id="lightbox-num"></span>
+                <span class="lightbox-divider">—</span>
+                <span class="lightbox-total">64</span>
+            </div>
+        </div>
+        <button class="lightbox-close" aria-label="Close">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <line x1="5" y1="5" x2="19" y2="19"/>
+                <line x1="19" y1="5" x2="5" y2="19"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <polyline points="9 18 15 12 9 6"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
